@@ -1,0 +1,12 @@
+{% extends 'users_base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+{% else %}
+    <h3>user --></h3>
+    {{user}}
+    <h3>enduser</h3>
+    Hello, {{ username|default:'Guest' }}!
+    {% endif %}
+{% endblock %}
