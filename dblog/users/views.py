@@ -11,7 +11,7 @@ def dashboard(request,username=""):
     print("username --> ",request.user)
     if request.user and not username:
         return redirect(f'/users/dashboard/{request.user}')
-    elif request.user.username != username:
+    elif request.user.username and request.user.username != username:
         return redirect(f'/users/dashboard/{request.user}')
     else:
         user_data={"user":request.user}
