@@ -1,12 +1,6 @@
 {% extends 'users_base.html' %}
+{% block title %}Dblog - Login {% endblock %}
+{% block navbar %}{% include 'users_navbar.html' %}{%endblock %}
 
-{% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-{% else %}
-    <h3>user --></h3>
-    {{user}}
-    <h3>enduser</h3>
-    Hello, {{ username|default:'Guest' }}!
-    {% endif %}
+{% block body %}
 {% endblock %}
